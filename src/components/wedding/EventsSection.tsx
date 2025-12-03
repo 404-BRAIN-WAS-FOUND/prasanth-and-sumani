@@ -28,19 +28,21 @@ const EventsSection = () => {
         {/* Events Grid */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           <EventCard
-            title="Holy Matrimony"
-            date="Monday, 29th December 2025"
-            time="10:00 AM"
-            venue="Infant Jesus Church"
-            address="Thallacheruvu Village, Atchampet Mandal, Palnadu District, A.P."
-            delay={0}
-          />
-          <EventCard
             title="Reception"
             date="Tuesday, 30th December 2025"
             time="7:00 PM"
             venue="SNR KALA Convention"
             address="Pedda Amberpet, Hyderabad, Telangana"
+            mapsUrl="https://maps.app.goo.gl/Q35Qu5ZVvUzmY4TPA"
+            delay={0}
+          />
+          <EventCard
+            title="Holy Matrimony"
+            date="Monday, 29th December 2025"
+            time="10:00 AM"
+            venue="Infant Jesus Church"
+            address="Thallacheruvu Village, Atchampet Mandal, Palnadu District, A.P."
+            mapsUrl="https://maps.app.goo.gl/xtWMNMnfFjGiWkDP9"
             delay={0.2}
           />
         </div>

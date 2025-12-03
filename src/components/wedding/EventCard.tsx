@@ -7,10 +7,11 @@ interface EventCardProps {
   time: string;
   venue: string;
   address: string;
+  mapsUrl?: string;
   delay?: number;
 }
 
-const EventCard = ({ title, date, time, venue, address, delay = 0 }: EventCardProps) => {
+const EventCard = ({ title, date, time, venue, address, mapsUrl, delay = 0 }: EventCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -37,7 +38,7 @@ const EventCard = ({ title, date, time, venue, address, delay = 0 }: EventCardPr
       {/* Date */}
       <div className="flex items-center justify-center gap-3 mb-4">
         <Calendar className="w-5 h-5 text-gold" />
-        <span className="font-display text-lg md:text-xl text-foreground">{date}</span>
+        <span className="font-display text-lg md:text-xl text-foreground font-bold">{date}</span>
       </div>
 
       {/* Time */}
@@ -52,7 +53,18 @@ const EventCard = ({ title, date, time, venue, address, delay = 0 }: EventCardPr
           <MapPin className="w-5 h-5 text-rose" />
           <span className="font-display text-lg text-foreground font-medium">{venue}</span>
         </div>
-        <p className="font-body text-sm text-muted-foreground leading-relaxed">{address}</p>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">{address}</p>
+        {mapsUrl && (
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-full transition-colors duration-300 text-sm"
+          >
+            <MapPin className="w-4 h-4" />
+            View on Maps
+          </a>
+        )}
       </div>
 
       {/* Decorative Corner Elements */}
