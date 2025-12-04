@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Cross, Sparkles } from "lucide-react";
+import { Heart, Sparkles } from "lucide-react";
 
 const FooterSection = () => {
   return (
@@ -51,7 +51,9 @@ const FooterSection = () => {
               ease: "easeInOut",
             }}
           />
-          <Cross className="w-12 h-12 text-gold mx-auto relative z-10 drop-shadow-lg" />
+          <svg className="w-12 h-12 text-gold mx-auto relative z-10 drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" />
+          </svg>
         </motion.div>
 
         {/* Closing Message */}
