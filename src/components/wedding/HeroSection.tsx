@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Cross } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import heroBg from "@/assets/wedding-hero-bg.jpg";
 
 const HeroSection = () => {
@@ -40,7 +40,9 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-4"
         >
-          <Cross className="w-8 h-8 text-gold animate-pulse" />
+          <svg className="w-10 h-10 text-gold animate-pulse" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" />
+          </svg>
         </motion.div>
 
         {/* Bible Verse */}
